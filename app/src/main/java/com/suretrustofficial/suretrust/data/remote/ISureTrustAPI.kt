@@ -26,7 +26,7 @@ interface ISureTrustAPI {
     @GET("home/notice/")
     suspend fun getNotice(): Response<List<NoticeResponse>>
 
-    @GET("community/get_count/")
+    @GET("community/get_count")
     suspend fun getCommunityCount(): Response<CommunityCountResponse>
 
     @GET("home/about-suretrust/")
