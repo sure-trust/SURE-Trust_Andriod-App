@@ -111,7 +111,9 @@ class RegisterViewModel @Inject constructor(
                 RegisterRequestBody(
                     college_district = collegeDist,
                     college_state = collegeState,
-                    course_id = selectedCourse,
+                    college_place = collegePlace,
+                    college_name = collegeName,
+                    course_id = "35",//selectedCourse, todo: Only for debug
                     email = email,
                     gender = selectedGenderOption,
                     password = password,

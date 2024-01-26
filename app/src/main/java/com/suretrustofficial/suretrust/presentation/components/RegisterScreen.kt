@@ -249,7 +249,7 @@ fun RegisterScreen(
                     fontFamily = LecendDeca
                 )
                 Spacer(modifier = Modifier.height(18.dp))
-                CourseDropDown (onValueSelected = registerViewModel::onCourseChange)
+                //CourseDropDown (onValueSelected = registerViewModel::onCourseChange)
             }
 
             5 -> Column {
