@@ -9,6 +9,8 @@ data class LoginRequestBody(
 data class RegisterRequestBody(
     val college_district: String,
     val college_state: String,
+    val college_place: String,
+    val college_name: String,
     val course_id: String,
     val email: String,
     val gender: String,
