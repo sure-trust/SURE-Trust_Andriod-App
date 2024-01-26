@@ -22,6 +22,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.suretrustofficial.suretrust.presentation.compose_config.Green
 import com.suretrustofficial.suretrust.presentation.compose_config.LecendDeca
 import com.suretrustofficial.suretrust.presentation.compose_config.White
 
@@ -51,7 +52,7 @@ fun ThemedTextField(
                 fontFamily = LecendDeca
             ),
             keyboardOptions = keyboardOptions,
-            cursorBrush = Brush.linearGradient(colors = listOf(White)),
+            cursorBrush = Brush.linearGradient(colors = listOf(White, Green)),
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color.Transparent)
