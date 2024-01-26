@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".presentation.research.ResearchFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/lexend_deca"
+        android:text="SURE Trust"
+        android:textAlignment="center"
+        android:textColor="@color/primary_blue"
+        android:textSize="32sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/desc_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:fontFamily="@font/lexend_deca"
+        android:text="@string/research_screen_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/name_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/lexend_deca"
+        android:text="Research guidance for project work, research proposal writing, thesis/dissertation writing will be given. You will also get hand-holding step by step guidance for writing research papers that can be published in highly acclaimed journals, totally free of cost."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/desc_tv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/contact_us_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_button_bg_blue"
+        android:fontFamily="@font/lexend_deca"
+        android:paddingHorizontal="12dp"
+        android:text="Contact us"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_background"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/about" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

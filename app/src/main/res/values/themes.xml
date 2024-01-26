@@ -1,0 +1,26 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SureTrust" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:statusBarColor">@color/primary_blue</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="fontFamily">@font/lexend_deca</item>
+    </style>
+
+    <style name="Splash.Theme.SureTrust" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="fontFamily">@font/lexend_deca</item>
+        <item name="android:statusBarColor">@color/primary_background</item>
+    </style>
+
+    <style name="Theme.SureTrust" parent="Base.Theme.SureTrust" />
+
+    <style name="SheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+</resources>
