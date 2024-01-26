@@ -6,9 +6,9 @@ import java.util.regex.Pattern
 object UserInputValidation {
     //todo:REGEX
     const val NAME_REGEX = ""
-    const val EMAIL_REGEX = ""
+    const val EMAIL_REGEX = "^(.+)@(\\S+)$"
     const val PHONE_REGEX = ""
-    const val PASSWORD_REGEX = ""
+    const val PASSWORD_REGEX = "^.{6,}$"
 
 
     fun validateField(field: String, regex: String): InputErrorType {

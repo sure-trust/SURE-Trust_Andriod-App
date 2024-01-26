@@ -3,6 +3,7 @@ package com.suretrustofficial.suretrust.presentation.auth
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.decapitalize
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.suretrustofficial.suretrust.data.local.PreferenceHelper
@@ -15,6 +16,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import java.util.Locale
 import javax.inject.Inject
 
 @HiltViewModel
@@ -51,7 +53,7 @@ class LoginViewModel @Inject constructor(
             repository.userLogin(
                 LoginRequestBody(
                     email = email,
-                    login_as = loginAs,
+                    login_as = loginAs.replaceFirstChar { it.lowercase() },//strictly case-sensitive
                     password = password,
                 )
             ).collectLatest { response ->
