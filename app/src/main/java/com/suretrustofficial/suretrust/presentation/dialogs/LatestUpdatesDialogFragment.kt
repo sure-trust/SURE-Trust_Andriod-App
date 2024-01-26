@@ -47,20 +47,20 @@ class LatestUpdatesDialogFragment : BaseDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         lifecycleScope.launchWhenStarted {
             viewModel.newsData.collectLatest {
-                binding.composeView.setContent {
-                    when (val data = it) {
-                        is StandardResponse.Failed -> NewsAndUpdatesScreen() {
-                            dismissAllowingStateLoss()
-                        }
-                        StandardResponse.Loading ->NewsAndUpdatesScreen() {
-                            dismissAllowingStateLoss()
-                        }
-                        is StandardResponse.Success -> NewsAndUpdatesScreen(data.data) {
-                            dismissAllowingStateLoss()
+                when (val data = it) {
+                    is StandardResponse.Failed -> {}
+
+                    StandardResponse.Loading -> {}
+
+                    is StandardResponse.Success -> {
+                        binding.composeView.setContent {
+                            NewsAndUpdatesScreen(data.data) {
+                                dismissAllowingStateLoss()
+                            }
                         }
                     }
-
                 }
+
             }
         }
     }

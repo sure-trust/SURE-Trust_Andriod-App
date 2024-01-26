@@ -27,7 +27,7 @@ class LatestUpdatesViewModel @Inject constructor(
 
     private fun getNewsUpdates() {
         viewModelScope.launch {
-            val response = repo.getNotice().collectLatest {
+            repo.getNotice().collectLatest {
                 _newsData.value = it
             }
         }
