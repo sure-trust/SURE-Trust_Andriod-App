@@ -41,14 +41,13 @@ abstract class BaseRemoteDataRepository {
     }
 
     suspend fun <T> safeAPICall(
-        apiCall: suspend () -> T
-    ): StandardResponse<T> {
-        return withContext(Dispatchers.IO) {
-            try {
-                StandardResponse.Success(apiCall.invoke())
-            } catch (e: Exception) {
-                StandardResponse.Failed(e.message.toString())
-            }
+        apiCall: suspend () -> T,
+        errorHandler: suspend (Exception) -> T
+    ): T {
+        return try {
+            apiCall()
+        } catch (e: Exception) {
+            errorHandler(e)
         }
     }
 }
