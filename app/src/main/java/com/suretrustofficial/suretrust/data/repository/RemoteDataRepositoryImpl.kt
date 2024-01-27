@@ -131,12 +131,14 @@ class RemoteDataRepositoryImpl @Inject constructor(
         flow<StandardResponse<DocumentResponse>> {
             emit(StandardResponse.Loading)
             safeAPICall(apiCall = {
-                val resp = api.getDocuments()
-                if (resp.isSuccessful && resp.body() != null) {
-                    StandardResponse.Success(resp.body()!!)
-                } else {
-                    StandardResponse.Failed("Something went wrong")
-                }
+                emit(retryIO {
+                    val resp = api.getDocuments()
+                    if (resp.isSuccessful && resp.body() != null) {
+                        StandardResponse.Success(resp.body()!!)
+                    } else {
+                        StandardResponse.Failed("Something went wrong")
+                    }
+                })
             }, errorHandler = {
                 emit(
                     StandardResponse.Failed(
