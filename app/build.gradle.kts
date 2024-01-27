@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.suretrustofficial.suretrust"
+    namespace = "com.suretrustapp.suretrust"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.suretrustofficial.suretrust"
+        applicationId = "com.suretrustapp.suretrust"
         minSdk = 24
         targetSdk = 33
         versionCode = 2
