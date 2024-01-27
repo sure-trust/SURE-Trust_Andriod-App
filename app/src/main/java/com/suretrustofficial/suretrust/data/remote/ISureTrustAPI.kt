@@ -1,6 +1,7 @@
 package com.suretrustofficial.suretrust.data.remote
 
 import com.suretrustofficial.suretrust.data.remote.models.CommunityCountResponse
+import com.suretrustofficial.suretrust.data.remote.models.DocumentResponse
 import com.suretrustofficial.suretrust.data.remote.models.LoginRequestBody
 import com.suretrustofficial.suretrust.data.remote.models.LoginResponse
 import com.suretrustofficial.suretrust.data.remote.models.NoticeResponse
@@ -31,4 +32,7 @@ interface ISureTrustAPI {
 
     @GET("home/about-suretrust/")
     suspend fun getAboutSureTrust(): Response<List<NoticeResponse>>
+
+    @GET("gallery/documents/")
+    suspend fun getDocuments(): Response<DocumentResponse>
 }

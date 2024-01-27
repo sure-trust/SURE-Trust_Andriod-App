@@ -4,6 +4,7 @@ import android.util.Log
 import com.suretrustofficial.suretrust.data.mappers.toNewsAndUpdatesDTO
 import com.suretrustofficial.suretrust.data.remote.ISureTrustAPI
 import com.suretrustofficial.suretrust.data.remote.models.CommunityCountResponse
+import com.suretrustofficial.suretrust.data.remote.models.DocumentResponse
 import com.suretrustofficial.suretrust.data.remote.models.LoginRequestBody
 import com.suretrustofficial.suretrust.data.remote.models.LoginResponse
 import com.suretrustofficial.suretrust.data.remote.models.NoticeResponse
@@ -117,6 +118,25 @@ class RemoteDataRepositoryImpl @Inject constructor(
                         StandardResponse.Failed("Something went wrong")
                     }
                 })
+            }, errorHandler = {
+                emit(
+                    StandardResponse.Failed(
+                        it.message ?: "Something went Wrong"
+                    )
+                )
+            })
+        }.flowOn(Dispatchers.IO)
+
+    override suspend fun getDocuments(): Flow<StandardResponse<DocumentResponse>> =
+        flow<StandardResponse<DocumentResponse>> {
+            emit(StandardResponse.Loading)
+            safeAPICall(apiCall = {
+                val resp = api.getDocuments()
+                if (resp.isSuccessful && resp.body() != null) {
+                    StandardResponse.Success(resp.body()!!)
+                } else {
+                    StandardResponse.Failed("Something went wrong")
+                }
             }, errorHandler = {
                 emit(
                     StandardResponse.Failed(

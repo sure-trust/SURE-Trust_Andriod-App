@@ -27,3 +27,16 @@ data class CommunityCountBody(
     val batch_count: Int,
     val trainer_count: Int
 )
+
+data class DocumentResponse(
+    val count: Int,
+    val next: String?,
+    val previous: String,
+    val results: List<Document>
+)
+
+data class Document(
+    val id: Int,
+    val title: String,
+    val file: String
+)
