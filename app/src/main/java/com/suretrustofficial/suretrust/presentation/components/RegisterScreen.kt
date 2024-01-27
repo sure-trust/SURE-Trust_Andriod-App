@@ -474,7 +474,7 @@ fun CourseDropDown(
     )
     var selectedIndex by remember { mutableStateOf(0) }
     Box(modifier = Modifier
-        .fillMaxSize()
+        .fillMaxWidth()
         .wrapContentSize(Alignment.TopStart)) {
         Text(
             text = courses[selectedIndex].courseName,
