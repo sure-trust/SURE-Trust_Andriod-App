@@ -16,32 +16,32 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.platform.UriHandler
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.suretrustofficial.suretrust.data.remote.models.Document
 import com.suretrustofficial.suretrust.presentation.compose_config.LecendDeca
 import com.suretrustofficial.suretrust.presentation.compose_config.PrimaryBackground
 import com.suretrustofficial.suretrust.presentation.compose_config.PrimaryBlue
 import com.suretrustofficial.suretrust.presentation.compose_config.SlateDark
 import com.suretrustofficial.suretrust.presentation.compose_config.White
+import com.suretrustofficial.suretrust.presentation.document.DocumentsViewModel
 
 @Composable
-@Preview
-fun DocumentScreen() {
-
-    val dummy = listOf(
-        "Document 1",
-        "Document 2",
-        "Document 3",
-        "Document 4",
-        "Document 5",
-        "Document 6",
-        "Document 7"
-    )
+fun DocumentScreen(
+    documentsViewModel: DocumentsViewModel = hiltViewModel()
+) {
+    val docsList by documentsViewModel.documentsState.collectAsState()
+    val localUriHandler = LocalUriHandler.current
 
     Box(
         modifier = Modifier
@@ -53,8 +53,10 @@ fun DocumentScreen() {
             item {
                 Spacer(modifier = Modifier.height(48.dp))
             }
-            items(dummy) {
-                DocumentCard(it)
+            items(docsList) {
+                DocumentCard(it, onOpenBtnClick = { docUrl ->
+                    openUri(localUriHandler, docUrl)
+                })
                 Spacer(modifier = Modifier.height(16.dp))
             }
         }
@@ -64,7 +66,8 @@ fun DocumentScreen() {
 @Composable
 @Preview
 fun DocumentCard(
-    title: String = "Document Name"
+    document: Document = Document(1, "Sample Document", "sample_doc.com"),
+    onOpenBtnClick: (String) -> Unit = {}
 ) {
     Row(
         modifier = Modifier
@@ -76,7 +79,7 @@ fun DocumentCard(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = title,
+            text = document.title,
             fontFamily = LecendDeca,
             fontSize = 16.sp,
             textAlign = TextAlign.Start,
@@ -96,8 +99,12 @@ fun DocumentCard(
                 .background(PrimaryBlue)
                 .padding(vertical = 8.dp)
                 .clickable {
-
+                    onOpenBtnClick(document.file)
                 }
         )
     }
+}
+
+fun openUri(uriHandler: UriHandler, uri: String) {
+    uriHandler.openUri(uri)
 }
