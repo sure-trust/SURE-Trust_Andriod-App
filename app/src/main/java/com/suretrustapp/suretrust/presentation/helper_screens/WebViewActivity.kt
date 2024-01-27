@@ -12,7 +12,6 @@ import com.suretrustapp.suretrust.databinding.ActivityWebViewBinding
 import com.suretrustapp.suretrust.presentation.bases.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
 @SuppressLint("SetJavaScriptEnabled")
 class WebViewActivity : BaseActivity() {
@@ -38,6 +37,7 @@ class WebViewActivity : BaseActivity() {
             binding.webView.apply {
                 loadUrl(browserUrl!!)
                 settings.javaScriptEnabled = true
+                settings.domStorageEnabled = true
                 webViewClient = WebViewClient()
             }
         } else {
