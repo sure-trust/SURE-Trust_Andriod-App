@@ -40,3 +40,20 @@ data class Document(
     val title: String,
     val file: String
 )
+
+
+data class CourseResponse(
+    val next: String? = null,
+    val previous: String? = null,
+    val count: Long,
+    val results: List<CourseItem>
+)
+
+data class CourseItem(
+    val prerequisites: String,
+    val syllabus: String,
+    val course_name: String,
+    val subcourses: List<CourseItem>,
+    val id: Long,
+    val category: String
+)

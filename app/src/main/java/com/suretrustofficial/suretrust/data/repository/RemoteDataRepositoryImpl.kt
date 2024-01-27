@@ -1,9 +1,9 @@
 package com.suretrustofficial.suretrust.data.repository
 
-import android.util.Log
 import com.suretrustofficial.suretrust.data.mappers.toNewsAndUpdatesDTO
 import com.suretrustofficial.suretrust.data.remote.ISureTrustAPI
 import com.suretrustofficial.suretrust.data.remote.models.CommunityCountResponse
+import com.suretrustofficial.suretrust.data.remote.models.CourseResponse
 import com.suretrustofficial.suretrust.data.remote.models.DocumentResponse
 import com.suretrustofficial.suretrust.data.remote.models.LoginRequestBody
 import com.suretrustofficial.suretrust.data.remote.models.LoginResponse
@@ -22,7 +22,6 @@ import javax.inject.Inject
 class RemoteDataRepositoryImpl @Inject constructor(
     private val api: ISureTrustAPI
 ) : BaseRemoteDataRepository(), RemoteDataRepository {
-    val TAG = "#$@RemoteDataRepoImpl"
 
     override suspend fun registerUser(registerRequestBody: RegisterRequestBody): Flow<StandardResponse<RegisterResponse>> =
         flow {
@@ -51,7 +50,6 @@ class RemoteDataRepositoryImpl @Inject constructor(
             safeAPICall(apiCall = {
                 emit(retryIO {
                     val resp = api.userLogin(loginBody)
-                    Log.v(TAG, "userLogin: response is $resp")
                     if (resp.isSuccessful && resp.body() != null) {
                         StandardResponse.Success(resp.body()!!)
                     } else {
@@ -89,7 +87,6 @@ class RemoteDataRepositoryImpl @Inject constructor(
             safeAPICall(apiCall = {
                 emit(retryIO {
                     val resp = api.getCommunityCount()
-                    Log.v(TAG, "getCommunityCount: response is $resp")
                     if (resp.isSuccessful && resp.body() != null) {
                         StandardResponse.Success(resp.body()!!)
                     } else {
@@ -111,7 +108,6 @@ class RemoteDataRepositoryImpl @Inject constructor(
             safeAPICall(apiCall = {
                 emit(retryIO {
                     val resp = api.getAboutSureTrust()
-                    Log.v(TAG, "getAboutSureTrust: response is $resp")
                     if (resp.isSuccessful && resp.body() != null) {
                         StandardResponse.Success(resp.body()!!)
                     } else {
@@ -128,7 +124,7 @@ class RemoteDataRepositoryImpl @Inject constructor(
         }.flowOn(Dispatchers.IO)
 
     override suspend fun getDocuments(): Flow<StandardResponse<DocumentResponse>> =
-        flow<StandardResponse<DocumentResponse>> {
+        flow {
             emit(StandardResponse.Loading)
             safeAPICall(apiCall = {
                 emit(retryIO {
@@ -148,7 +144,47 @@ class RemoteDataRepositoryImpl @Inject constructor(
             })
         }.flowOn(Dispatchers.IO)
 
-    companion object {
-        const val TAG = "remotedatarepositoryimpl"
-    }
+    override suspend fun getMedicalCourseByPage(page: Int): Flow<StandardResponse<CourseResponse>> =
+        flow {
+            emit(StandardResponse.Loading)
+            safeAPICall(apiCall = {
+                emit(retryIO {
+                    val resp = api.getMedicalCourse(page = page)
+                    if (resp.isSuccessful && resp.body() != null) {
+                        StandardResponse.Success(resp.body()!!)
+                    } else {
+                        StandardResponse.Failed("Something went wrong")
+                    }
+                })
+            }, errorHandler = {
+                emit(
+                    StandardResponse.Failed(
+                        it.message ?: "Something went Wrong"
+                    )
+                )
+            })
+
+        }.flowOn(Dispatchers.IO)
+
+    override suspend fun getNonMedicalCourseByPage(page: Int): Flow<StandardResponse<CourseResponse>> =
+        flow {
+            emit(StandardResponse.Loading)
+            safeAPICall(apiCall = {
+                emit(retryIO {
+                    val resp = api.getNonMedicalCourse(page = page)
+                    if (resp.isSuccessful && resp.body() != null) {
+                        StandardResponse.Success(resp.body()!!)
+                    } else {
+                        StandardResponse.Failed("Something went wrong")
+                    }
+                })
+            }, errorHandler = {
+                emit(
+                    StandardResponse.Failed(
+                        it.message ?: "Something went Wrong"
+                    )
+                )
+            })
+
+        }.flowOn(Dispatchers.IO)
 }

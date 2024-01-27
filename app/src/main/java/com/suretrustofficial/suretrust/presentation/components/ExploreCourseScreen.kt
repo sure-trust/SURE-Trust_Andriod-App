@@ -1,5 +1,6 @@
 package com.suretrustofficial.suretrust.presentation.components
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -17,106 +18,43 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.suretrustofficial.suretrust.presentation.compose_config.LecendDeca
 import com.suretrustofficial.suretrust.presentation.compose_config.PrimaryBackground
 import com.suretrustofficial.suretrust.presentation.compose_config.PrimaryBlue
 import com.suretrustofficial.suretrust.presentation.compose_config.PrimaryPurple
 import com.suretrustofficial.suretrust.presentation.compose_config.SlateDark
 import com.suretrustofficial.suretrust.presentation.compose_config.White
+import com.suretrustofficial.suretrust.presentation.explore.ExploreCourseViewModel
+import com.suretrustofficial.suretrust.presentation.helper_screens.WebViewActivity
 
 @Composable
 @Preview
-fun ExploreCourseScreen() {
+fun ExploreCourseScreen(
+    viewModel: ExploreCourseViewModel = hiltViewModel()
+) {
 
-    var tabSelected by remember {
+    val medCourseList by viewModel.medCourseState.collectAsState()
+    val nonMedCourseList by viewModel.nonMedCourseState.collectAsState()
+
+    var tabSelected by rememberSaveable {
         mutableStateOf(TabOptions.TECHNICAL)
     }
-
-    var dummyList = listOf(
-        CourseDetail(
-            id = 1L,
-            name = "Android Development",
-            details = "B.tech 3rd and 4th year",
-            trainers = listOf(
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer")
-            )
-        ),
-        CourseDetail(
-            id = 1L,
-            name = "Android Development",
-            details = "B.tech 3rd and 4th year",
-            trainers = listOf(
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer")
-            )
-        ),
-        CourseDetail(
-            id = 1L,
-            name = "Android Development",
-            details = "B.tech 3rd and 4th year",
-            trainers = listOf(
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer")
-            )
-        ),
-        CourseDetail(
-            id = 1L,
-            name = "Android Development",
-            details = "B.tech 3rd and 4th year",
-            trainers = listOf(
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer")
-            )
-        ),
-        CourseDetail(
-            id = 1L,
-            name = "Android Development",
-            details = "B.tech 3rd and 4th year",
-            trainers = listOf(
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer")
-            )
-        ),
-        CourseDetail(
-            id = 1L,
-            name = "Android Development",
-            details = "B.tech 3rd and 4th year",
-            trainers = listOf(
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer")
-            )
-        ),
-        CourseDetail(
-            id = 1L,
-            name = "Android Development",
-            details = "B.tech 3rd and 4th year",
-            trainers = listOf(
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer"),
-                TrainerDetail(name = "Subhadip Das", about = "Professional Android developer")
-            )
-        )
-    )
 
     Box(
         modifier = Modifier
@@ -166,11 +104,11 @@ fun ExploreCourseScreen() {
             }
             Spacer(modifier = Modifier.height(36.dp))
             LazyColumn {
-                items(dummyList) {
+                items(if (tabSelected == TabOptions.TECHNICAL) nonMedCourseList else medCourseList) {
                     CourseCardView(
                         couseId = it.id,
-                        courseName = it.name,
-                        courseDetails = it.details
+                        courseName = it.course_name,
+                        courseDetails = it.prerequisites
                     )
                     Spacer(modifier = Modifier.height(24.dp))
                 }
@@ -183,9 +121,10 @@ fun ExploreCourseScreen() {
 @Preview
 fun CourseCardView(
     couseId: Long = -1L,
-    courseName: String = "Course Name",
-    courseDetails: String = "Course description"
+    courseName: String? = "Course Name",
+    courseDetails: String? = "Course description"
 ) {
+    val context = LocalContext.current
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -199,18 +138,18 @@ fun CourseCardView(
         Row(verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = courseName,
+                    text = courseName ?: "Unknown",
                     fontFamily = LecendDeca,
                     fontSize = 18.sp,
-                    textAlign = TextAlign.Center,
+                    textAlign = TextAlign.Start,
                     color = White
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = courseDetails,
+                    text = courseDetails ?: "NOT FOUND",
                     fontFamily = LecendDeca,
-                    fontSize = 14.sp,
-                    textAlign = TextAlign.Center,
+                    fontSize = 12.sp,
+                    textAlign = TextAlign.Start,
                     color = White,
                     modifier = Modifier.alpha(0.5f)
                 )
@@ -225,25 +164,19 @@ fun CourseCardView(
                     .clip(RoundedCornerShape(20.dp))
                     .background(PrimaryBlue)
                     .padding(vertical = 8.dp, horizontal = 16.dp)
-                    .clickable { }
+                    .clickable {
+                        Log.d("COURSELOGLOG","https://www.suretrustforruralyouth.com/courses/${couseId}" )
+                        WebViewActivity.openWebView(
+                            context,
+                            "https://www.suretrustforruralyouth.com/courses/${couseId}",
+                            courseName ?: "Explore Course"
+                        )
+                    }
             )
         }
         Spacer(modifier = Modifier.height(24.dp))
     }
 }
-
-data class CourseDetail(
-    val id: Long,
-    val name: String,
-    val details: String,
-    val trainers: List<TrainerDetail>
-)
-
-
-data class TrainerDetail(
-    val name: String,
-    val about: String
-)
 
 enum class TabOptions {
     MEDICAL,

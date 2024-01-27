@@ -1,6 +1,7 @@
 package com.suretrustofficial.suretrust.domain.repository
 
 import com.suretrustofficial.suretrust.data.remote.models.CommunityCountResponse
+import com.suretrustofficial.suretrust.data.remote.models.CourseResponse
 import com.suretrustofficial.suretrust.data.remote.models.DocumentResponse
 import com.suretrustofficial.suretrust.data.remote.models.LoginRequestBody
 import com.suretrustofficial.suretrust.data.remote.models.LoginResponse
@@ -18,4 +19,6 @@ interface RemoteDataRepository {
     suspend fun getCommunityCount(): Flow<StandardResponse<CommunityCountResponse>>
     suspend fun getAboutSureTrust(loginBody: LoginRequestBody): Flow<StandardResponse<List<NoticeResponse>>>
     suspend fun getDocuments(): Flow<StandardResponse<DocumentResponse>>
+    suspend fun getMedicalCourseByPage(page: Int): Flow<StandardResponse<CourseResponse>>
+    suspend fun getNonMedicalCourseByPage(page: Int): Flow<StandardResponse<CourseResponse>>
 }
