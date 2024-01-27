@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebChromeClient
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.suretrustofficial.suretrust.R
 import com.suretrustofficial.suretrust.databinding.FragmentHomeBinding
@@ -32,7 +31,7 @@ class HomeFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setTrendingVideo()
-//        startStatsCounter(CommunityCount())
+
         setTextForCards()
         setNewsFlow()
         binding.setFooterListeners()
@@ -45,6 +44,10 @@ class HomeFragment : BaseFragment() {
 
         binding.exploreCourseBtn.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_exploreCourseFragment)
+        }
+
+        binding.getStartedBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_signupFragment)
         }
     }
 
@@ -110,7 +113,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun startStatsCounter(communityCount: CommunityCount) {
-        //TODO: SERVER DATA
+
         val counter1Animation = ValueAnimator.ofInt(0, 300)
         val counter2Animation = ValueAnimator.ofInt(0, 1000)
         val counter3Animation = ValueAnimator.ofInt(0, 300)

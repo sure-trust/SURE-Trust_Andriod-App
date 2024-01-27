@@ -4,7 +4,7 @@ import com.suretrustofficial.suretrust.presentation.components.InputErrorType
 import java.util.regex.Pattern
 
 object UserInputValidation {
-    //todo:REGEX
+
     const val NAME_REGEX = ""
     const val EMAIL_REGEX = "^(.+)@(\\S+)$"
     const val PHONE_REGEX = ""

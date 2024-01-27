@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_exploreCourseFragment"
             app:destination="@id/exploreCourseFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -47,11 +50,6 @@
         android:label="Our Approach"
         tools:layout="@layout/fragment_guidance" />
     <fragment
-        android:id="@+id/imageGalleryFragment"
-        android:name="com.suretrustofficial.suretrust.presentation.gallery.ImageGalleryFragment"
-        android:label="fragment_image_gallery"
-        tools:layout="@layout/fragment_image_gallery" />
-    <fragment
         android:id="@+id/signupFragment"
         android:name="com.suretrustofficial.suretrust.presentation.auth.SignupFragment"
         android:label="Register"
@@ -63,11 +61,6 @@
             android:id="@+id/action_signupFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/videoGalleryFragment"
-        android:name="com.suretrustofficial.suretrust.presentation.gallery.VideoGalleryFragment"
-        android:label="fragment_video_gallery"
-        tools:layout="@layout/fragment_video_gallery" />
     <fragment
         android:id="@+id/internshipZoneFragment"
         android:name="com.suretrustofficial.suretrust.presentation.internship.InternshipZoneFragment"
