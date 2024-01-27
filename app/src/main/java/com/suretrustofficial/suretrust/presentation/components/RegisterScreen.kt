@@ -249,7 +249,7 @@ fun RegisterScreen(
                     fontFamily = LecendDeca
                 )
                 Spacer(modifier = Modifier.height(18.dp))
-                //CourseDropDown (onValueSelected = registerViewModel::onCourseChange)
+                CourseDropDown (onValueSelected = registerViewModel::onCourseChange)
             }
 
             5 -> Column {
@@ -418,7 +418,7 @@ fun CourseDropDown(
     onValueSelected: (String) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val courses = listOf(
+    val courses1 = listOf(
         "Robotics Foundation Course",
         "SAP FICO Training",
         "Android App Development",
@@ -458,12 +458,26 @@ fun CourseDropDown(
         "Medical Coding Training",
         "SAP ABAP Consultant Training",
     )
+    val courses = listOf(
+        Course(23, "Robotics Foundation Course"),
+        Course(32, "Cybersecurity & Ethical Hacking"),
+        Course(35, "Android App Development"),
+        Course(37, "Full Stack Development"),
+        Course(40, "Core Java Programming"),
+        Course(43, "Python & Machine Learning Basic Applications"),
+        Course(54, "Digital Marketing"),
+        Course(59, "Embedded Systems and Internet of Things"),
+        Course(62, "Financial Modelling & Valuation"),
+        Course(65, "SQL & Microsoft BI Tools including PowerBi"),
+        Course(96, "Data Science and Data Analytics -- Basic Applications"),
+        Course(98, "PCB Designing"),
+    )
     var selectedIndex by remember { mutableStateOf(0) }
     Box(modifier = Modifier
         .fillMaxSize()
         .wrapContentSize(Alignment.TopStart)) {
         Text(
-            text = courses[selectedIndex],
+            text = courses[selectedIndex].courseName,
             color = White,
             fontSize = 14.sp,
             fontFamily = LecendDeca,
@@ -485,12 +499,17 @@ fun CourseDropDown(
             courses.forEachIndexed { index, data ->
                 DropdownMenuItem(onClick = {
                     selectedIndex = index
-                    onValueSelected(courses[selectedIndex])
+                    onValueSelected(courses[selectedIndex].id.toString())
                     expanded = false
                 }) {
-                    Text(text = data)
+                    Text(text = data.courseName)
                 }
             }
         }
     }
 }
+
+data class Course(
+    val id: Int,
+    val courseName: String
+)
