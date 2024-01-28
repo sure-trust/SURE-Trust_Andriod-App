@@ -1,24 +1,28 @@
 package com.suretrustapp.suretrust.presentation.bases
 
+
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.navigation.NavigationView
 import com.suretrustapp.suretrust.R
 import com.suretrustapp.suretrust.data.local.PreferenceHelper
 import com.suretrustapp.suretrust.data.local.PreferenceKey
 import com.suretrustapp.suretrust.databinding.ActivityHomeBinding
-import com.suretrustapp.suretrust.presentation.components.LoginScreen
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
-class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
+class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeListener,
+    NavigationView.OnNavigationItemSelectedListener {
     private var _binding: ActivityHomeBinding? = null
     val binding get() = _binding!!
     private lateinit var navController: NavController
@@ -29,12 +33,12 @@ class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeL
         super.onCreate(savedInstanceState)
         _binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         navController = findNavController(R.id.fragment)
         binding.navigationView.setupWithNavController(navController)
 
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
+        setNavigationViewListener()
         manipulateMenus()
         listener = NavController
             .OnDestinationChangedListener { controller, destination, arguments ->
@@ -47,7 +51,12 @@ class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeL
             }
     }
 
-    private fun manipulateMenus(){
+    private fun setNavigationViewListener() {
+        val navigationView = findViewById<NavigationView>(R.id.navigation_view) as NavigationView
+        navigationView.setNavigationItemSelectedListener(this)
+    }
+
+    private fun manipulateMenus() {
         val menu: Menu = binding.navigationView.menu
         val logoutMenuItem = menu.findItem(R.id.logoutMenu)
         val registerMenuItem = menu.findItem(R.id.loginFragment)
@@ -85,5 +94,15 @@ class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeL
                 registerMenuItem.isVisible = PreferenceHelper.authToken == null
             }
         }
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.logoutMenu -> {
+                PreferenceHelper.authToken = null
+                manipulateMenus()
+            }
+        }
+        return true
     }
 }
