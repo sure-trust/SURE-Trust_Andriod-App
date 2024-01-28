@@ -51,11 +51,12 @@ fun LoginScreen(
     val context = LocalContext.current
 
     LaunchedEffect(key1 = Unit) {
-        loginViewModel.loginScreenUiEvents.receiveAsFlow().collectLatest { event->
+        loginViewModel.loginScreenUiEvents.receiveAsFlow().collectLatest { event ->
             when (event) {
                 is LoginScreenUiEvents.LoginSuccess -> {
                     onSuccess(event.email, event.password)
                 }
+
                 is LoginScreenUiEvents.ShowToast -> {
                     context.showToast(event.message)
                 }
@@ -98,7 +99,7 @@ fun LoginScreen(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     RadioButton(
                         selected = (option == loginViewModel.loginAs),
-                        onClick = {loginViewModel.onLoginAsChange(option)},
+                        onClick = { loginViewModel.onLoginAsChange(option) },
                         colors = RadioButtonDefaults.colors(
                             selectedColor = PrimaryBlue,
                             unselectedColor = White.copy(0.6f)
@@ -120,7 +121,7 @@ fun LoginScreen(
             colors = ButtonDefaults.buttonColors(backgroundColor = PrimaryBlue)
         ) {
             Text(
-                text = "Register",
+                text = "Login",
                 fontSize = 16.sp,
                 color = Color.Black,
                 fontFamily = LecendDeca

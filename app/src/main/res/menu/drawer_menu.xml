@@ -68,6 +68,12 @@
             android:layout_height="wrap_content"
             android:title="About the developer" />
 
+        <item
+            android:id="@+id/logoutMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Logout" />
+
     </group>
 
 </menu>

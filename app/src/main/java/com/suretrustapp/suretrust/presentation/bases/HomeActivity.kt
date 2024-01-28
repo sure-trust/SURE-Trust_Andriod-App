@@ -1,6 +1,8 @@
 package com.suretrustapp.suretrust.presentation.bases
 
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.Menu
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -8,11 +10,13 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.suretrustapp.suretrust.R
+import com.suretrustapp.suretrust.data.local.PreferenceHelper
+import com.suretrustapp.suretrust.data.local.PreferenceKey
 import com.suretrustapp.suretrust.databinding.ActivityHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeActivity : BaseActivity() {
+class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
     private var _binding: ActivityHomeBinding? = null
     private val binding get() = _binding!!
     private lateinit var navController: NavController
@@ -30,10 +34,16 @@ class HomeActivity : BaseActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        listener =
-            NavController.OnDestinationChangedListener { controller, destination, arguments ->
+        val menu: Menu = binding.navigationView.menu
+        val logoutMenuItem = menu.findItem(R.id.logoutMenu)
+        logoutMenuItem.isVisible = PreferenceHelper.authToken != null
+
+        listener = NavController
+            .OnDestinationChangedListener { controller, destination, arguments ->
                 when (destination.id) {
-                    //TODO: OPTIONAL
+                    R.id.logoutMenu -> {
+                        PreferenceHelper.authToken = null
+                    }
                 }
             }
     }
@@ -55,5 +65,15 @@ class HomeActivity : BaseActivity() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    override fun onSharedPreferenceChanged(p0: SharedPreferences?, key: String?) {
+        when (key) {
+            PreferenceKey.AUTH_TOKEN -> {
+                val menu: Menu = binding.navigationView.menu
+                val logoutMenuItem = menu.findItem(R.id.logoutMenu)
+                logoutMenuItem.isVisible = PreferenceHelper.authToken != null
+            }
+        }
     }
 }
