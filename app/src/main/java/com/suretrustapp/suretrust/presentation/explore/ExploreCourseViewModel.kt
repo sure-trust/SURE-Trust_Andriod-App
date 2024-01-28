@@ -1,5 +1,6 @@
 package com.suretrustapp.suretrust.presentation.explore
 
+import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.suretrustapp.suretrust.data.remote.models.CourseItem
@@ -19,12 +20,16 @@ class ExploreCourseViewModel @Inject constructor(
 ) : ViewModel() {
 
     //TODO: USE MAPPER TO POPULATE THE UI STATE else the ui layer will access data layer
-
+    private val medList = mutableStateListOf<CourseItem>()
+    private val nonMedList = mutableStateListOf<CourseItem>()
     private val _medCourseState = MutableStateFlow<List<CourseItem>>(emptyList())
     val medCourseState: StateFlow<List<CourseItem>> get() = _medCourseState.asStateFlow()
 
     private val _nonMedCourseState = MutableStateFlow<List<CourseItem>>(emptyList())
     val nonMedCourseState: StateFlow<List<CourseItem>> get() = _nonMedCourseState.asStateFlow()
+
+    private val _nextState = MutableStateFlow<String?>(null)
+    val nextState: StateFlow<String?> = _nextState.asStateFlow()
 
     init {
         getMedCourseByPage()
@@ -36,7 +41,8 @@ class ExploreCourseViewModel @Inject constructor(
             repo.getMedicalCourseByPage(page).collectLatest {
                 when (it) {
                     is StandardResponse.Success -> {
-                        _medCourseState.value = it.data.results
+                        medList.addAll(it.data.results)
+                        _medCourseState.value = medList.distinctBy { data -> data.id }
                     }
 
                     is StandardResponse.Failed -> {}
@@ -51,7 +57,9 @@ class ExploreCourseViewModel @Inject constructor(
             repo.getNonMedicalCourseByPage(page).collectLatest {
                 when (it) {
                     is StandardResponse.Success -> {
-                        _nonMedCourseState.value = it.data.results
+                        nonMedList.addAll(it.data.results)
+                        _nonMedCourseState.value = nonMedList.distinctBy { data -> data.id }
+                        _nextState.value = it.data.next
                     }
 
                     is StandardResponse.Failed -> {}
@@ -60,5 +68,4 @@ class ExploreCourseViewModel @Inject constructor(
             }
         }
     }
-
 }

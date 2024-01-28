@@ -1,6 +1,5 @@
 package com.suretrustapp.suretrust.presentation.components
 
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -18,9 +17,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -51,9 +53,14 @@ fun ExploreCourseScreen(
 
     val medCourseList by viewModel.medCourseState.collectAsState()
     val nonMedCourseList by viewModel.nonMedCourseState.collectAsState()
+    val nextState by viewModel.nextState.collectAsState()
 
     var tabSelected by rememberSaveable {
         mutableStateOf(TabOptions.TECHNICAL)
+    }
+
+    var page by remember {
+        mutableIntStateOf(0)
     }
 
     Box(
@@ -112,6 +119,23 @@ fun ExploreCourseScreen(
                     )
                     Spacer(modifier = Modifier.height(24.dp))
                 }
+                item {
+                    LaunchedEffect(true) {
+                        if (nextState == null && page == 0) {
+                            //first time
+                            when (tabSelected) {
+                                TabOptions.MEDICAL -> viewModel.getMedCourseByPage(++page)
+                                TabOptions.TECHNICAL -> viewModel.getNonMedCourseByPage(++page)
+                            }
+                        } else if (nextState != null) {
+                            //next iterations
+                            when (tabSelected) {
+                                TabOptions.MEDICAL -> viewModel.getMedCourseByPage(++page)
+                                TabOptions.TECHNICAL -> viewModel.getNonMedCourseByPage(++page)
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -165,7 +189,6 @@ fun CourseCardView(
                     .background(PrimaryBlue)
                     .padding(vertical = 8.dp, horizontal = 16.dp)
                     .clickable {
-                        Log.d("COURSELOGLOG","https://www.suretrustforruralyouth.com/courses/${couseId}" )
                         WebViewActivity.openWebView(
                             context,
                             "https://www.suretrustforruralyouth.com/courses/${couseId}",
