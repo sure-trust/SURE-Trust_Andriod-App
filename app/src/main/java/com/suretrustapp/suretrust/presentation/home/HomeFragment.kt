@@ -1,21 +1,26 @@
 package com.suretrustapp.suretrust.presentation.home
 
 import android.animation.ValueAnimator
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebChromeClient
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.suretrustapp.suretrust.R
+import com.suretrustapp.suretrust.data.local.PreferenceHelper
+import com.suretrustapp.suretrust.data.local.PreferenceKey
 import com.suretrustapp.suretrust.databinding.FragmentHomeBinding
 import com.suretrustapp.suretrust.presentation.bases.BaseFragment
+import com.suretrustapp.suretrust.presentation.bases.HomeActivity
 import com.suretrustapp.suretrust.presentation.dialogs.LatestUpdatesDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment() {
+class HomeFragment : BaseFragment(), SharedPreferences.OnSharedPreferenceChangeListener  {
     private var _binding: FragmentHomeBinding? = null
     private val binding: FragmentHomeBinding get() = _binding!!
     val homeViewModel: HomeViewModel by viewModels()
@@ -173,5 +178,17 @@ class HomeFragment : BaseFragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    override fun onSharedPreferenceChanged(p0: SharedPreferences?, key: String?) {
+        when (key) {
+            PreferenceKey.AUTH_TOKEN -> {
+                val menu: Menu = (activity as? HomeActivity)?.binding?.navigationView?.menu!!
+                val logoutMenuItem = menu.findItem(R.id.logoutMenu)
+                val registerMenuItem = menu.findItem(R.id.loginFragment)
+                logoutMenuItem.isVisible = PreferenceHelper.authToken != null
+                registerMenuItem.isVisible = PreferenceHelper.authToken == null
+            }
+        }
     }
 }
