@@ -45,7 +45,7 @@ fun LoginScreen(
     onForgotPasswordClicked: () -> Unit,
     loginViewModel: LoginViewModel = hiltViewModel(),
 ) {
-    //todo:
+
     val options = listOf("Student", "Teacher")
 
     val context = LocalContext.current
