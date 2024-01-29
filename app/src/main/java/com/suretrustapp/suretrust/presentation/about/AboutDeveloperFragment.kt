@@ -24,7 +24,17 @@ class AboutDeveloperFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.linkedinBtn.setOnClickListener {
+            openWebBrowser("https://www.linkedin.com/in/subhadipdhn/")
+        }
 
+        binding.gmailBtn.setOnClickListener {
+            openWebBrowser("mailto:subhadipdhn@gmail.com")
+        }
+
+        binding.githubBtn.setOnClickListener {
+            openWebBrowser("https://github.com/Subhadiptech")
+        }
 
     }
 

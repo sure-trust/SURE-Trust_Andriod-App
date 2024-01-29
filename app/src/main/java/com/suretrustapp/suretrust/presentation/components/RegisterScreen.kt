@@ -45,6 +45,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.suretrustapp.suretrust.data.local.PreferenceHelper
+import com.suretrustapp.suretrust.data.local.PreferenceTypeConvertor
+import com.suretrustapp.suretrust.data.remote.models.CourseItem
 import com.suretrustapp.suretrust.presentation.auth.RegisterScreenUiEvents
 import com.suretrustapp.suretrust.presentation.auth.RegisterViewModel
 import com.suretrustapp.suretrust.presentation.compose_config.LecendDeca
@@ -62,11 +65,11 @@ fun RegisterScreen(
     navigateToLogin: () -> Unit,
     registerViewModel: RegisterViewModel = hiltViewModel(),
 ) {
-    //todo:
+
     val context = LocalContext.current
 
     LaunchedEffect(key1 = Unit) {
-        registerViewModel.registerScreenUiEvents.receiveAsFlow().collectLatest { event->
+        registerViewModel.registerScreenUiEvents.receiveAsFlow().collectLatest { event ->
             when (event) {
                 is RegisterScreenUiEvents.RegisterSuccess -> {
                     onRegistrationComplete()
@@ -96,7 +99,7 @@ fun RegisterScreen(
     }
 
 
-    var page by rememberSaveable{
+    var page by rememberSaveable {
         mutableIntStateOf(1)
     }
 
@@ -173,7 +176,7 @@ fun RegisterScreen(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             RadioButton(
                                 selected = (option == registerViewModel.selectedGenderOption),
-                                onClick = {registerViewModel.onSelectedGenderOptionChange(option)},
+                                onClick = { registerViewModel.onSelectedGenderOptionChange(option) },
                                 colors = RadioButtonDefaults.colors(
                                     selectedColor = PrimaryBlue,
                                     unselectedColor = White.copy(0.6f)
@@ -248,7 +251,7 @@ fun RegisterScreen(
                     fontFamily = LecendDeca
                 )
                 Spacer(modifier = Modifier.height(18.dp))
-                CourseDropDown (onValueSelected = registerViewModel::onCourseChange)
+                CourseDropDown(onValueSelected = registerViewModel::onCourseChange)
             }
 
             5 -> Column {
@@ -351,7 +354,7 @@ fun RegisterScreen(
         }
         Spacer(modifier = Modifier.height(24.dp))
         Row(modifier = Modifier.fillMaxWidth()) {
-            if(page==5){
+            if (page == 5) {
                 Button(
                     onClick = registerViewModel::onRegisterButtonClicked,
                     modifier = Modifier.weight(1f),
@@ -364,7 +367,7 @@ fun RegisterScreen(
                         fontFamily = LecendDeca
                     )
                 }
-            }else{
+            } else {
                 Button(
                     onClick = {
                         if (page > 1) page--
@@ -417,66 +420,23 @@ fun CourseDropDown(
     onValueSelected: (String) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val courses1 = listOf(
-        "Robotics Foundation Course",
-        "SAP FICO Training",
-        "Android App Development",
-        "R Programming for Data Science",
-        "Robotic Process Automation (RPA)",
-        "Digital Marketing",
-        "Cybersecurity & Ethical Hacking",
-        "Financial Modelling & Valuation",
-        "Embedded Systems and Internet of Things",
-        "Blockchain Technology - Ethereum & Solana",
-        "UI / UX Designing and Project Management",
-        "EXCEL Applications for Business - Basic and Intermediate",
-        "Industrial Automation",
-        "Data Structures & Algorithms",
-        "Core Java Programming",
-        "Data Structures & Algorithms in Python",
-        "VLSI Designing - (Front-End)",
-        "Full Stack Development",
-        "Salesforce Foundation Course",
-        "VLSI Designing - (Back-End)",
-        "Python & Machine Learning Basic Applications",
-        "SAP Training",
-        "Software Testing & Tools",
-        "VLSI Designing - (Front-End)",
-        "AutoCad & Solidworks for Mechanical Engineers",
-        "SQL & Microsoft BI Tools including PowerBi",
-        "PCB Designing",
-        "Industrial Training for Civil Engineers",
-        "Cloud Computing & DevOps - Basic Applications",
-        "Computer Vision Algorithm Developer Course",
-        "Data Science and Data Analytics -- Basic Applications",
-        "SAP S/4 HANA",
-        "VLSI Designing Course",
-        "Smart Plant 3D Training Course",
-        "Data Engineering",
-        "Data Structures & Algorithms in C++",
-        "Medical Coding Training",
-        "SAP ABAP Consultant Training",
-    )
-    val courses = listOf(
-        Course(23, "Robotics Foundation Course"),
-        Course(32, "Cybersecurity & Ethical Hacking"),
-        Course(35, "Android App Development"),
-        Course(37, "Full Stack Development"),
-        Course(40, "Core Java Programming"),
-        Course(43, "Python & Machine Learning Basic Applications"),
-        Course(54, "Digital Marketing"),
-        Course(59, "Embedded Systems and Internet of Things"),
-        Course(62, "Financial Modelling & Valuation"),
-        Course(65, "SQL & Microsoft BI Tools including PowerBi"),
-        Course(96, "Data Science and Data Analytics -- Basic Applications"),
-        Course(98, "PCB Designing"),
-    )
-    var selectedIndex by remember { mutableStateOf(0) }
-    Box(modifier = Modifier
-        .fillMaxWidth()
-        .wrapContentSize(Alignment.TopStart)) {
+    val coursesMed =
+        PreferenceTypeConvertor.stringToCourseModelList(PreferenceHelper.localMedCourseList)
+    val coursesNonMed =
+        PreferenceTypeConvertor.stringToCourseModelList(PreferenceHelper.localNonMedCourseList)
+    val coursesList = mutableListOf<CourseItem>()
+    coursesList.addAll(coursesNonMed)
+    coursesList.addAll(coursesMed)
+
+    var selectedIndex by remember { mutableIntStateOf(0) }
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .wrapContentSize(Alignment.TopStart)
+    ) {
         Text(
-            text = courses[selectedIndex].courseName,
+            text = coursesList[selectedIndex].course_name,
             color = White,
             fontSize = 14.sp,
             fontFamily = LecendDeca,
@@ -495,20 +455,15 @@ fun CourseDropDown(
                 .fillMaxWidth()
                 .background(White.copy(alpha = 0.5f))
         ) {
-            courses.forEachIndexed { index, data ->
+            coursesList.forEachIndexed { index, data ->
                 DropdownMenuItem(onClick = {
                     selectedIndex = index
-                    onValueSelected(courses[selectedIndex].id.toString())
+                    onValueSelected(coursesList[selectedIndex].id.toString())
                     expanded = false
                 }) {
-                    Text(text = data.courseName)
+                    Text(text = data.course_name)
                 }
             }
         }
     }
 }
-
-data class Course(
-    val id: Int,
-    val courseName: String
-)

@@ -1,27 +1,22 @@
 package com.suretrustapp.suretrust.presentation.bases
 
-
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.navigation.NavigationView
 import com.suretrustapp.suretrust.R
 import com.suretrustapp.suretrust.data.local.PreferenceHelper
 import com.suretrustapp.suretrust.data.local.PreferenceKey
 import com.suretrustapp.suretrust.databinding.ActivityHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
-class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeListener,
-    NavigationView.OnNavigationItemSelectedListener {
+class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
     private var _binding: ActivityHomeBinding? = null
     val binding get() = _binding!!
     private lateinit var navController: NavController
@@ -37,7 +32,6 @@ class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeL
 
         appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
-        setNavigationViewListener()
         manipulateMenus()
         listener = NavController
             .OnDestinationChangedListener { controller, destination, arguments ->
@@ -48,11 +42,7 @@ class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeL
                     }
                 }
             }
-    }
 
-    private fun setNavigationViewListener() {
-        val navigationView = findViewById<NavigationView>(R.id.navigation_view) as NavigationView
-        navigationView.setNavigationItemSelectedListener(this)
     }
 
     private fun manipulateMenus() {
@@ -68,13 +58,13 @@ class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeL
         return findNavController(R.id.fragment).navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    override fun onResume() {
-        super.onResume()
+    override fun onStart() {
+        super.onStart()
         navController.addOnDestinationChangedListener(listener)
     }
 
-    override fun onPause() {
-        super.onPause()
+    override fun onStop() {
+        super.onStop()
         navController.removeOnDestinationChangedListener(listener)
     }
 
@@ -93,15 +83,5 @@ class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeL
                 registerMenuItem.isVisible = PreferenceHelper.authToken == null
             }
         }
-    }
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.logoutMenu -> {
-                PreferenceHelper.authToken = null
-                manipulateMenus()
-            }
-        }
-        return true
     }
 }
