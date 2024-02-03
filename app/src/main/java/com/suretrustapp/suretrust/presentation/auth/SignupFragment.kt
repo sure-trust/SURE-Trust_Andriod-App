@@ -2,12 +2,15 @@ package com.suretrustapp.suretrust.presentation.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.suretrustapp.suretrust.R
+import com.suretrustapp.suretrust.data.local.PreferenceHelper
 import com.suretrustapp.suretrust.databinding.FragmentSignupBinding
 import com.suretrustapp.suretrust.presentation.bases.BaseFragment
+import com.suretrustapp.suretrust.presentation.bases.HomeActivity
 import com.suretrustapp.suretrust.presentation.components.RegisterScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -28,7 +31,14 @@ class SignupFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.composeView.setContent {
             RegisterScreen(
-                onRegistrationComplete = {findNavController().navigate(R.id.action_signupFragment_to_homeFragment)},
+                onRegistrationComplete = {
+                    findNavController().navigate(R.id.action_signupFragment_to_homeFragment)
+                    val menu: Menu = (activity as? HomeActivity)?.binding?.navigationView?.menu!!
+                    val logoutMenuItem = menu.findItem(R.id.logoutMenu)
+                    val registerMenuItem = menu.findItem(R.id.loginFragment)
+                    logoutMenuItem.isVisible = PreferenceHelper.authToken != null
+                    registerMenuItem.isVisible = PreferenceHelper.authToken == null
+                },
                 navigateToLogin = { findNavController().navigate(R.id.action_signupFragment_to_loginFragment) }
             )
         }

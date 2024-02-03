@@ -20,7 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import java.lang.ref.WeakReference
 
 @AndroidEntryPoint
-class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
+class HomeActivity : BaseActivity() {
     private var _binding: ActivityHomeBinding? = null
     val binding get() = _binding!!
     private lateinit var navController: NavController
@@ -54,18 +54,6 @@ class HomeActivity : BaseActivity(), SharedPreferences.OnSharedPreferenceChangeL
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-    }
-
-    override fun onSharedPreferenceChanged(p0: SharedPreferences?, key: String?) {
-        when (key) {
-            PreferenceKey.AUTH_TOKEN -> {
-                val menu: Menu = binding.navigationView.menu
-                val logoutMenuItem = menu.findItem(R.id.logoutMenu)
-                val registerMenuItem = menu.findItem(R.id.loginFragment)
-                logoutMenuItem.isVisible = PreferenceHelper.authToken != null
-                registerMenuItem.isVisible = PreferenceHelper.authToken == null
-            }
-        }
     }
 
     private fun handleManualNavigationClicks(

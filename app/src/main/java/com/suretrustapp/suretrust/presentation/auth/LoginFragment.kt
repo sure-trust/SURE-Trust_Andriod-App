@@ -18,7 +18,7 @@ import com.suretrustapp.suretrust.presentation.helper_screens.WebViewActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LoginFragment : BaseFragment(), SharedPreferences.OnSharedPreferenceChangeListener  {
+class LoginFragment : BaseFragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding get() = _binding!!
 
@@ -37,6 +37,11 @@ class LoginFragment : BaseFragment(), SharedPreferences.OnSharedPreferenceChange
                 onSuccess = { email, password ->
                     //handle the api
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                    val menu: Menu = (activity as? HomeActivity)?.binding?.navigationView?.menu!!
+                    val logoutMenuItem = menu.findItem(R.id.logoutMenu)
+                    val registerMenuItem = menu.findItem(R.id.loginFragment)
+                    logoutMenuItem.isVisible = PreferenceHelper.authToken != null
+                    registerMenuItem.isVisible = PreferenceHelper.authToken == null
                 },
                 navigateToRegister = { findNavController().navigate(R.id.action_loginFragment_to_signupFragment) },
                 onForgotPasswordClicked = {
@@ -53,17 +58,5 @@ class LoginFragment : BaseFragment(), SharedPreferences.OnSharedPreferenceChange
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-    }
-
-    override fun onSharedPreferenceChanged(p0: SharedPreferences?, key: String?) {
-        when (key) {
-            PreferenceKey.AUTH_TOKEN -> {
-                val menu: Menu = (activity as? HomeActivity)?.binding?.navigationView?.menu!!
-                val logoutMenuItem = menu.findItem(R.id.logoutMenu)
-                val registerMenuItem = menu.findItem(R.id.loginFragment)
-                logoutMenuItem.isVisible = PreferenceHelper.authToken != null
-                registerMenuItem.isVisible = PreferenceHelper.authToken == null
-            }
-        }
     }
 }
