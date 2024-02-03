@@ -20,6 +20,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.suretrustapp.suretrust.presentation.compose_config.Green
@@ -33,7 +35,8 @@ fun ThemedTextField(
     value: String,
     onValueChange: (String) -> Unit,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
-    error: InputErrorType = InputErrorType.NO_ERROR
+    error: InputErrorType = InputErrorType.NO_ERROR,
+    isPassword: Boolean = false
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(
@@ -46,6 +49,7 @@ fun ThemedTextField(
         BasicTextField(
             value = value,
             onValueChange = onValueChange,
+            visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
             textStyle = TextStyle(
                 color = White,
                 fontSize = 14.sp,

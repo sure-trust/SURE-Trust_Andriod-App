@@ -88,6 +88,7 @@ fun LoginScreen(
         Spacer(modifier = Modifier.height(16.dp))
         ThemedTextField(
             fieldLabel = "Password",
+            isPassword = true,
             value = loginViewModel.password,
             onValueChange = loginViewModel::onPasswordChange,
             error = loginViewModel.passwordError,

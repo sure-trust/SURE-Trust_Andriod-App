@@ -138,6 +138,7 @@ fun RegisterScreen(
                 Spacer(modifier = Modifier.height(16.dp))
                 ThemedTextField(
                     fieldLabel = "Password",
+                    isPassword = true,
                     value = registerViewModel.password,
                     onValueChange = registerViewModel::onPasswordChange,
                     error = registerViewModel.passwordError,
