@@ -180,7 +180,7 @@ class HomeFragment : BaseFragment(), SharedPreferences.OnSharedPreferenceChangeL
         _binding = null
     }
 
-    override fun onSharedPreferenceChanged(p0: SharedPreferences?, key: String?) {
+    override fun onSharedPreferenceChanged(sp: SharedPreferences?, key: String?) {
         when (key) {
             PreferenceKey.AUTH_TOKEN -> {
                 val menu: Menu = (activity as? HomeActivity)?.binding?.navigationView?.menu!!
