@@ -1,6 +1,5 @@
 package com.suretrustapp.suretrust.presentation.bases
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import androidx.customview.widget.Openable
@@ -14,8 +13,8 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.suretrustapp.suretrust.R
 import com.suretrustapp.suretrust.data.local.PreferenceHelper
-import com.suretrustapp.suretrust.data.local.PreferenceKey
 import com.suretrustapp.suretrust.databinding.ActivityHomeBinding
+import com.suretrustapp.suretrust.presentation.helper_screens.WebViewActivity
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.ref.WeakReference
 
@@ -61,19 +60,32 @@ class HomeActivity : BaseActivity() {
         appBarConfiguration: AppBarConfiguration
     ) {
         binding.navigationView.setNavigationItemSelectedListener { item ->
-            if (item.itemId == R.id.logoutMenu) {
-                PreferenceHelper.authToken = null
-                manipulateMenus()
-                true
-            } else {
-                val handled = NavigationUI.onNavDestinationSelected(item, navController)
-                if (handled) {
-                    val parent = binding.navigationView.parent
-                    if (parent is Openable) {
-                        parent.close()
-                    }
+            when (item.itemId) {
+                R.id.logoutMenu -> {
+                    PreferenceHelper.authToken = null
+                    manipulateMenus()
+                    true
                 }
-                handled
+
+                R.id.privacyPolicy -> {
+                    WebViewActivity.openWebView(
+                        this@HomeActivity,
+                        "https://www.termsfeed.com/live/0a255dee-c98b-49b2-96e8-3bb3db3c616a",
+                        "Privacy Policy"
+                    )
+                    true
+                }
+
+                else -> {
+                    val handled = NavigationUI.onNavDestinationSelected(item, navController)
+                    if (handled) {
+                        val parent = binding.navigationView.parent
+                        if (parent is Openable) {
+                            parent.close()
+                        }
+                    }
+                    handled
+                }
             }
         }
         val weakReference = WeakReference(binding.navigationView)

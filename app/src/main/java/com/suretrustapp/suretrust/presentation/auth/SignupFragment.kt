@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.suretrustapp.suretrust.R
 import com.suretrustapp.suretrust.data.local.PreferenceHelper
@@ -38,6 +39,7 @@ class SignupFragment : BaseFragment() {
                     val registerMenuItem = menu.findItem(R.id.loginFragment)
                     logoutMenuItem.isVisible = PreferenceHelper.authToken != null
                     registerMenuItem.isVisible = PreferenceHelper.authToken == null
+                    Toast.makeText(requireContext(), "Registration Success", Toast.LENGTH_SHORT).show()
                 },
                 navigateToLogin = { findNavController().navigate(R.id.action_signupFragment_to_loginFragment) }
             )
