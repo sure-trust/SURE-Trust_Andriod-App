@@ -2,6 +2,7 @@ package com.suretrustapp.suretrust.presentation.bases
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Toast
 import androidx.customview.widget.Openable
 import androidx.navigation.FloatingWindow
 import androidx.navigation.NavController
@@ -63,6 +64,7 @@ class HomeActivity : BaseActivity() {
             when (item.itemId) {
                 R.id.logoutMenu -> {
                     PreferenceHelper.authToken = null
+                    Toast.makeText(this@HomeActivity, "Logout Success", Toast.LENGTH_SHORT).show()
                     manipulateMenus()
                     true
                 }
