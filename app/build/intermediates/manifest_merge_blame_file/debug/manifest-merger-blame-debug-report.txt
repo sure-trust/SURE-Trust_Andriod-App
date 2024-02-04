@@ -1,0 +1,195 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.suretrustapp.suretrust"
+4    android:versionCode="2"
+5    android:versionName="2.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:5:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.10.0] /Users/subhadip/.gradle/caches/transforms-3/568502e4105d877b5fc486c812eb86c6/transformed/core-1.10.0/AndroidManifest.xml:22:5-24:47
+14        android:name="com.suretrustapp.suretrust.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.10.0] /Users/subhadip/.gradle/caches/transforms-3/568502e4105d877b5fc486c812eb86c6/transformed/core-1.10.0/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.10.0] /Users/subhadip/.gradle/caches/transforms-3/568502e4105d877b5fc486c812eb86c6/transformed/core-1.10.0/AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.suretrustapp.suretrust.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.10.0] /Users/subhadip/.gradle/caches/transforms-3/568502e4105d877b5fc486c812eb86c6/transformed/core-1.10.0/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.10.0] /Users/subhadip/.gradle/caches/transforms-3/568502e4105d877b5fc486c812eb86c6/transformed/core-1.10.0/AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:7:5-38:19
+20        android:name="com.suretrustapp.suretrust.di.SureTrustApplication"
+20-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:8:9-48
+21        android:allowBackup="true"
+21-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:9:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.10.0] /Users/subhadip/.gradle/caches/transforms-3/568502e4105d877b5fc486c812eb86c6/transformed/core-1.10.0/AndroidManifest.xml:28:18-86
+23        android:dataExtractionRules="@xml/data_extraction_rules"
+23-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:10:9-65
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:11:9-54
+27        android:icon="@mipmap/ic_launcher"
+27-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:12:9-43
+28        android:label="@string/app_name"
+28-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:13:9-41
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:14:9-54
+30        android:supportsRtl="true"
+30-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:15:9-35
+31        android:testOnly="true"
+32        android:theme="@style/Theme.SureTrust"
+32-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:16:9-47
+33        android:usesCleartextTraffic="true" >
+33-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:17:9-44
+34        <activity
+34-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:19:9-21:40
+35            android:name="com.suretrustapp.suretrust.presentation.helper_screens.PDFViewActivity"
+35-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:20:13-72
+36            android:exported="false" />
+36-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:21:13-37
+37        <activity
+37-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:22:9-31:20
+38            android:name="com.suretrustapp.suretrust.presentation.splash.SplashActivity"
+38-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:23:13-63
+39            android:exported="true"
+39-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:24:13-36
+40            android:theme="@style/Splash.Theme.SureTrust" >
+40-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:25:13-58
+41            <intent-filter>
+41-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:26:13-30:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:27:17-69
+42-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:27:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:29:17-77
+44-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:29:27-74
+45            </intent-filter>
+46        </activity>
+47        <activity
+47-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:32:9-34:40
+48            android:name="com.suretrustapp.suretrust.presentation.helper_screens.WebViewActivity"
+48-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:33:13-72
+49            android:exported="false" />
+49-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:34:13-37
+50        <activity
+50-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:35:9-37:40
+51            android:name="com.suretrustapp.suretrust.presentation.bases.HomeActivity"
+51-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:36:13-60
+52            android:exported="false" />
+52-->/Users/subhadip/Desktop/Freelancing_SureTrust/app/src/main/AndroidManifest.xml:37:13-37
+53
+54        <service
+54-->[androidx.room:room-runtime:2.5.1] /Users/subhadip/.gradle/caches/transforms-3/b68060139b93c50ea68c8b1b1d8d3285/transformed/room-runtime-2.5.1/AndroidManifest.xml:24:9-28:63
+55            android:name="androidx.room.MultiInstanceInvalidationService"
+55-->[androidx.room:room-runtime:2.5.1] /Users/subhadip/.gradle/caches/transforms-3/b68060139b93c50ea68c8b1b1d8d3285/transformed/room-runtime-2.5.1/AndroidManifest.xml:25:13-74
+56            android:directBootAware="true"
+56-->[androidx.room:room-runtime:2.5.1] /Users/subhadip/.gradle/caches/transforms-3/b68060139b93c50ea68c8b1b1d8d3285/transformed/room-runtime-2.5.1/AndroidManifest.xml:26:13-43
+57            android:exported="false" />
+57-->[androidx.room:room-runtime:2.5.1] /Users/subhadip/.gradle/caches/transforms-3/b68060139b93c50ea68c8b1b1d8d3285/transformed/room-runtime-2.5.1/AndroidManifest.xml:27:13-37
+58
+59        <provider
+59-->[androidx.emoji2:emoji2:1.4.0] /Users/subhadip/.gradle/caches/transforms-3/a45d72abd7fe38c77521655503010a8a/transformed/emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+60            android:name="androidx.startup.InitializationProvider"
+60-->[androidx.emoji2:emoji2:1.4.0] /Users/subhadip/.gradle/caches/transforms-3/a45d72abd7fe38c77521655503010a8a/transformed/emoji2-1.4.0/AndroidManifest.xml:25:13-67
+61            android:authorities="com.suretrustapp.suretrust.androidx-startup"
+61-->[androidx.emoji2:emoji2:1.4.0] /Users/subhadip/.gradle/caches/transforms-3/a45d72abd7fe38c77521655503010a8a/transformed/emoji2-1.4.0/AndroidManifest.xml:26:13-68
+62            android:directBootAware="true"
+62-->[com.louiscad.splitties:splitties-appctx-android:3.0.0] /Users/subhadip/.gradle/caches/transforms-3/728bcf7d9116ac6998b6aa136652c288/transformed/splitties-appctx-debug/AndroidManifest.xml:15:13-43
+63            android:exported="false" >
+63-->[androidx.emoji2:emoji2:1.4.0] /Users/subhadip/.gradle/caches/transforms-3/a45d72abd7fe38c77521655503010a8a/transformed/emoji2-1.4.0/AndroidManifest.xml:27:13-37
+64            <meta-data
+64-->[androidx.emoji2:emoji2:1.4.0] /Users/subhadip/.gradle/caches/transforms-3/a45d72abd7fe38c77521655503010a8a/transformed/emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+65                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+65-->[androidx.emoji2:emoji2:1.4.0] /Users/subhadip/.gradle/caches/transforms-3/a45d72abd7fe38c77521655503010a8a/transformed/emoji2-1.4.0/AndroidManifest.xml:30:17-75
+66                android:value="androidx.startup" />
+66-->[androidx.emoji2:emoji2:1.4.0] /Users/subhadip/.gradle/caches/transforms-3/a45d72abd7fe38c77521655503010a8a/transformed/emoji2-1.4.0/AndroidManifest.xml:31:17-49
+67            <meta-data
+67-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/subhadip/.gradle/caches/transforms-3/b1c411b46a44858de0c939f6a6277ff4/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+68                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+68-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/subhadip/.gradle/caches/transforms-3/b1c411b46a44858de0c939f6a6277ff4/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+69                android:value="androidx.startup" />
+69-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/subhadip/.gradle/caches/transforms-3/b1c411b46a44858de0c939f6a6277ff4/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+70            <meta-data
+70-->[com.louiscad.splitties:splitties-appctx-android:3.0.0] /Users/subhadip/.gradle/caches/transforms-3/728bcf7d9116ac6998b6aa136652c288/transformed/splitties-appctx-debug/AndroidManifest.xml:19:13-21:52
+71                android:name="splitties.init.AppCtxInitializer"
+71-->[com.louiscad.splitties:splitties-appctx-android:3.0.0] /Users/subhadip/.gradle/caches/transforms-3/728bcf7d9116ac6998b6aa136652c288/transformed/splitties-appctx-debug/AndroidManifest.xml:20:17-64
+72                android:value="androidx.startup" />
+72-->[com.louiscad.splitties:splitties-appctx-android:3.0.0] /Users/subhadip/.gradle/caches/transforms-3/728bcf7d9116ac6998b6aa136652c288/transformed/splitties-appctx-debug/AndroidManifest.xml:21:17-49
+73            <meta-data
+73-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+74                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+74-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+75                android:value="androidx.startup" />
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+76        </provider>
+77
+78        <uses-library
+78-->[androidx.window:window:1.0.0] /Users/subhadip/.gradle/caches/transforms-3/7446a659e0b7855d921d82a34bcb10e5/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+79            android:name="androidx.window.extensions"
+79-->[androidx.window:window:1.0.0] /Users/subhadip/.gradle/caches/transforms-3/7446a659e0b7855d921d82a34bcb10e5/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+80            android:required="false" />
+80-->[androidx.window:window:1.0.0] /Users/subhadip/.gradle/caches/transforms-3/7446a659e0b7855d921d82a34bcb10e5/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+81        <uses-library
+81-->[androidx.window:window:1.0.0] /Users/subhadip/.gradle/caches/transforms-3/7446a659e0b7855d921d82a34bcb10e5/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+82            android:name="androidx.window.sidecar"
+82-->[androidx.window:window:1.0.0] /Users/subhadip/.gradle/caches/transforms-3/7446a659e0b7855d921d82a34bcb10e5/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+83            android:required="false" />
+83-->[androidx.window:window:1.0.0] /Users/subhadip/.gradle/caches/transforms-3/7446a659e0b7855d921d82a34bcb10e5/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+84
+85        <activity
+85-->[androidx.compose.ui:ui-tooling-android:1.5.1] /Users/subhadip/.gradle/caches/transforms-3/70409da916493aab7f10b8e2c5960589/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+86            android:name="androidx.compose.ui.tooling.PreviewActivity"
+86-->[androidx.compose.ui:ui-tooling-android:1.5.1] /Users/subhadip/.gradle/caches/transforms-3/70409da916493aab7f10b8e2c5960589/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+87            android:exported="true" />
+87-->[androidx.compose.ui:ui-tooling-android:1.5.1] /Users/subhadip/.gradle/caches/transforms-3/70409da916493aab7f10b8e2c5960589/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+88
+89        <receiver
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+90            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+91            android:directBootAware="false"
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+92            android:enabled="true"
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+93            android:exported="true"
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+94            android:permission="android.permission.DUMP" >
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+95            <intent-filter>
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+96                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+97            </intent-filter>
+98            <intent-filter>
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+99                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+100            </intent-filter>
+101            <intent-filter>
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+102                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+103            </intent-filter>
+104            <intent-filter>
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+105                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/subhadip/.gradle/caches/transforms-3/49413ae1770cc0280e76e20b6fe2aa9b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+106            </intent-filter>
+107        </receiver>
+108    </application>
+109
+110</manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawer_header_gradient"
+    android:gravity="bottom|start"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Sure Trust"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:fontFamily="@font/lexend_deca" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Social Service Initiative"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:fontFamily="@font/lexend_deca" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

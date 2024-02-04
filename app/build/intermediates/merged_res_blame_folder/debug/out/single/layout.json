@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_documents.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_documents.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_placement_cell.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_placement_cell.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/activity_pdfview.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/activity_pdfview.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_explore_course.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_explore_course.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/internship_project_card_view.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/internship_project_card_view.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/updates_news_layout.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/updates_news_layout.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/activity_web_view.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/activity_web_view.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/activity_splash.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/activity_home.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_about.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_about.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_signup.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_signup.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/skills_training_guideline_layout.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/skills_training_guideline_layout.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_about_developer.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_about_developer.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_life_skills.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_life_skills.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_home.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/contact_details_layout.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/contact_details_layout.xml"
+    },
+    {
+        "merged": "com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_about_developer.xml",
+        "source": "com.suretrustapp.suretrust.app-main-84:/layout/fragment_about_developer.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_internship_zone.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_internship_zone.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_guidance.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_guidance.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_research.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_research.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/card_with_gradient.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/card_with_gradient.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/drawer_header_layout.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/drawer_header_layout.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-mergeDebugResources-81:/layout/fragment_login.xml",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_login.xml"
+    }
+]

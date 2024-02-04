@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@id/loginFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Login / Register" />
+
+        <item
+            android:id="@id/exploreCourseFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Explore Courses" />
+
+        <item
+            android:id="@id/internshipZoneFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Internship Zone" />
+
+        <item
+            android:id="@id/placementCellFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Placement Assistant Cell" />
+
+        <item
+            android:id="@id/lifeSkillsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Life skills training program" />
+
+        <item
+            android:id="@id/guidanceFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Know about course approach" />
+
+        <item
+            android:id="@id/researchFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Research guidance" />
+
+        <item
+            android:id="@id/documentsFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Documents" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@id/aboutFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="About us" />
+
+        <item
+            android:id="@id/aboutDeveloperFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="About the developer" />
+
+        <item
+            android:id="@+id/logoutMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Logout" />
+
+    </group>
+
+</menu>

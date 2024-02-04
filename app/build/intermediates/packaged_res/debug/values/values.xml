@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dull_green">#408489</color>
+    <color name="dull_pink">#6f3c59</color>
+    <color name="dull_yellow">#745941</color>
+    <color name="green">#30855b</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="light_blue">#91A2FF</color>
+    <color name="light_brown">#FFF1DC</color>
+    <color name="light_green">#A1EEBD</color>
+    <color name="light_orange">#FFB491</color>
+    <color name="light_pink">#F6D6D6</color>
+    <color name="light_purple">#F1EAFF</color>
+    <color name="light_red">#FD8A8A</color>
+    <color name="light_sky">#AEDEFC</color>
+    <color name="light_yellow">#FDD14F</color>
+    <color name="primary_background">#1a212d</color>
+    <color name="primary_blue">#3083ce</color>
+    <color name="primary_purple">#b692f5</color>
+    <color name="red">#EF0000</color>
+    <color name="slate">#95FFFFFF</color>
+    <color name="slate_dark">#2c3749</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">SURE Trust</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="long_about_text">I have had the greatest privilege of being a student as well as faculty for 40 years in Sri Sathya Sai Institute of Higher Learning, Anantapur Campus, Andhra Pradesh, India, whose founder chancellor is Bhagawan Sri Sathya Sai Baba. While my dream was to continue to serve the Institution even after retirement, little did I realize that Bhagawan had different plans for me. The inborn passion for teaching and research; and the nature of “always move ahead with optimism amidst all adversities”, made my mind debate on how to put to use the vast knowledge acquired over this long period of teaching, for the benefit of youth, especially living in rural areas. So, I decided to set out on a journey to visit the villages, around Puttaparthi, Anantapur district of Andhra Pradesh, India, for assessing the requirements of educated unemployed rural youth. While I was waiting for an auspicious day to begin the journey, I spotted Mrs. Vandana Nagesh, in the Darshan grounds in Sai Kulwant Hall. After she departed from the department of Management &amp; Commerce, Anantapur Campus in the mid-1990s on completion of her studies, this was the first time I met her. Having nurtured special love for all the students, I was pleasantly surprised to see her; and picked up conversation. On listening to my plan during the chat, Mrs. Vandana instantly offered to accompany me.Our journey into the villages, thus, began, for identifying the missing skill sets in educated but unemployed rural youth. Delightful coincidences during the journey made us feel that Swami was hand holding and directing us in every step we undertook. The search brought to light the twin realities of rural areas. While most of the rural youth are qualified with professional degrees, majority of them are idling at home lacking the skill sets needed by the industry for employing them. This reality resulted in the dawn of the "Skill Upgradation for Rural-youth Empowerment – SURE" concept. Proceeding further, a brochure mentioning the programs that are offered to enhance their skill sets was circulated. In response, Mr. Jagadeesh, from a remote village in Anantapur district, Andhra Pradesh, India, approached us. A detailed discussion with Jagadeesh revealed that he is highly versatile with Python program, AI, ML,DL, DS, and DA. Having good communication skills and with Navodaya schooling background, he said he discontinued M.C.A integrated program from LPU, Punjab, to use his theoretical knowledge to build industry-related software solutions, and thus gain the required capability to set up a startup venture. completing PG diploma in AI and ML from IIIT, Bangalore. Jagadeesh is currently pursuing MS in AI and ML from Liverpool John Moores University, London, UK, through upGrad online platform. Simultaneously Mr. Jagadeesh is sincerely training batches of students in Python, AI, ML, DL, DS, and DA.The overall understanding we gained from this village survey was that majority of rural youth besides possessing good academic degrees, have amazing talent and inexplicable zeal to learn new things. With a little guidance to channelize their latent talent in the right direction, they will undoubtedly become the dynamic soldiers of Indian economic growth. We express our heartfelt gratitude to Bhagawan Sri Sathya Sai Baba for promoting us to start this highly fulfilling service initiate, and sincerely pray for His continued guidance.</string>
+    <string name="research_screen_text">Research Guidance Corner\n<font color="#b692f5"><b>Cost-free</b></font> &amp; <font color="#3083ce"><b>experienced</b></font> Research Guidance</string>
+    <string name="unique_card_1"><b>Online</b>\nMode of Training</string>
+    <string name="unique_card_2"><b>4 Months</b>\nPeriod of Training</string>
+    <string name="unique_card_3"><b>6</b>\nSessions per Week</string>
+    <string name="unique_card_4"><b>1 Hour</b>\nSession duration</string>
+    <string name="unique_card_5"><b>2 per month</b>\nAssignment</string>
+    <string name="unique_card_6"><b>Last 15 days</b>\nReport preparation</string>
+    <style name="Base.Theme.SureTrust" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:statusBarColor">@color/primary_blue</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="fontFamily">@font/lexend_deca</item>
+    </style>
+    <style name="SheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <style name="Splash.Theme.SureTrust" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="fontFamily">@font/lexend_deca</item>
+        <item name="android:statusBarColor">@color/primary_background</item>
+    </style>
+    <style name="Theme.SureTrust" parent="Base.Theme.SureTrust"/>
+</resources>

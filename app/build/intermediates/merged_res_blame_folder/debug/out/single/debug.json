@@ -1,0 +1,362 @@
+[
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_muralikrishna.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_muralikrishna.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_card_with_gradient.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/card_with_gradient.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/navigation_home_nav_graph.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/navigation/home_nav_graph.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_amar.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_amar.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_announcement.png.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_announcement.png"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_updates_news_layout.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/updates_news_layout.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_dr_pravir_sharma.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_dr_pravir_sharma.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_white_border_rounded_card_bg.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/white_border_rounded_card_bg.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_blur_bg.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_blur_bg.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_vijayalakshmi.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_vijayalakshmi.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/menu_drawer_menu.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/menu/drawer_menu.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_gmail.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_gmail.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_curved_line.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/curved_line.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_copy.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_copy.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_rounded_button_bg_purple.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/rounded_button_bg_purple.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_uniqueness_course_card_bg.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/uniqueness_course_card_bg.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_kk.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_kk.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_ramnan.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_ramnan.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_anurag.jpeg.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_anurag.jpeg"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_internship_zone.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_internship_zone.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/xml_backup_rules.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.suretrustapp.suretrust.app-merged_res-82:/menu_drawer_menu.xml.flat",
+        "source": "com.suretrustapp.suretrust.app-main-84:/menu/drawer_menu.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/font_lexend_deca.ttf.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/font/lexend_deca.ttf"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_tick.png.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_tick.png"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_lawyer.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_lawyer.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_bhomika.png.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_bhomika.png"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_activity_home.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_internship_project_card_view.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/internship_project_card_view.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_kritika.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_kritika.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_logo.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_logo.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_logo.png.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_logo.png"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_about_developer.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_about_developer.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_satya_sai_baba.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_satya_sai_baba.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_saravana.jpeg.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_saravana.jpeg"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_shaped_bg.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_shaped_bg.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_skills_training_guideline_layout.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/skills_training_guideline_layout.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_login.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_dhara.jpeg.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_dhara.jpeg"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_meiappan.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_meiappan.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_documents.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_documents.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_explore_course.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_explore_course.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_dummy.jpeg.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_dummy.jpeg"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_activity_splash.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_contact_details_layout.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/contact_details_layout.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_sri_raman.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_sri_raman.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_ssr_kumar.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_ssr_kumar.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_saisudha.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_saisudha.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_linkedin.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_linkedin.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_rounded_button_bg_blue.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/rounded_button_bg_blue.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_placement_cell.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_placement_cell.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_github.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_github.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_signup.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_signup.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_home.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_chandramohan.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_chandramohan.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_bordered_purple_btn.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/bordered_purple_btn.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_activity_web_view.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/activity_web_view.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_research.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_research.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_drawer_header_gradient.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/drawer_header_gradient.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_krishnamurthy.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_krishnamurthy.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_life_skills.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_life_skills.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_bottom_sheet_bg.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/bottom_sheet_bg.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_vandana.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_vandana.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_activity_pdfview.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/activity_pdfview.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_radha_mam.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_radha_mam.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_drawer_header_layout.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/drawer_header_layout.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_developer.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_developer.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_pritam.jpeg.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_pritam.jpeg"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_guidance.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_guidance.xml"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/drawable_ic_sujith.webp.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/drawable/ic_sujith.webp"
+    },
+    {
+        "merged": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-merged_res-82:/layout_fragment_about.xml.flat",
+        "source": "/Users/subhadip/.gradle/daemon/8.0/com.suretrustapp.suretrust.app-main-84:/layout/fragment_about.xml"
+    }
+]
