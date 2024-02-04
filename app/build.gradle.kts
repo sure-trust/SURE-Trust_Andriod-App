@@ -14,7 +14,7 @@ android {
         applicationId = "com.suretrustapp.suretrust"
         minSdk = 24
         targetSdk = 33
-        versionCode = 2
+        versionCode = 3
         versionName = "2.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
